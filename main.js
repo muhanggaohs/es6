@@ -1,16 +1,20 @@
 // get Element
-const cart_items = document.getElementById('cart');
+const skills_holder = document.getElementById('skills');
 
 // ES6
 
-
 // ES6
-function addProduct(name, category) {
-    return {
-        name,
-        category
-    }
-}
+const yourSkills = ['Web Development', 'Back-End', 'Front-End'];
 
-var getProduct = addProduct("iPhone 11", "Gadget");
-cart_items.innerHTML = `Product: ${getProduct.name} Category: ${getProduct.category}`;
+// add skills
+// yourSkills.push('Dev Ops');
+
+let parent = '<ul>';
+
+yourSkills.forEach((skill) => {
+    parent += '<li>' + skill + '</li>';
+    console.log(`${skill}`);
+});
+
+parent += '</ul>';
+skills_holder.innerHTML = parent;
