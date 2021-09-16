@@ -1,11 +1,10 @@
+// get Element
+const user_place = document.getElementById('user');
+
 // ES6
 
 
-
 // ES6
-
-let myCars = ['BMW', 'Honda', 'Mitsubishi'];
-
-for (let i = 0; i < myCars.length; i++) {
-    console.log(myCars[i]);
-}
+const user_logged = "Robert";
+user_place.innerHTML = `Hi ${user_logged}`;
+console.log(user_logged);
