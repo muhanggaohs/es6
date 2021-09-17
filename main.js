@@ -1,14 +1,22 @@
 // get Element
-const skills_holder = document.getElementById('skills');
+const skills_holder = document.getElementById('data');
 
 // ES6
 
 // ES6
-const yourSkills = ['Web Development', 'Back-End', 'Front-End'];
+// member
+class Siswa {
+    constructor(username, password, nama_kelas) {
+        this.username = username;
+        this.password = password;
+        this.nama_kelas = nama_kelas;
+    }
 
-// filter
-const myPrimarySkill = yourSkills.filter(skill => {
-    return skill === "Web Development";
-});
+    join() {
+        console.log(this.username + ' Joined ' + this.nama_kelas);
+    }
 
-skills_holder.innerHTML = myPrimarySkill;
+}
+
+let addSiswa = new Siswa('Angga', '123123', 'OOP');
+addSiswa.join();
